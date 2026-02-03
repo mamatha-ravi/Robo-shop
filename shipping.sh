@@ -15,6 +15,7 @@ VALIDATE $? "Installing MySQL"
 # if [ $? -ne 0 ]; then
 
     mysql -h $MYSQL_HOST -uroot -pRoboShop@1 < /app/db/schema.sql &>>$LOGS_FILE
+    validate $? "schema"
     mysql -h $MYSQL_HOST -uroot -pRoboShop@1 < /app/db/app-user.sql &>>$LOGS_FILE
     mysql -h $MYSQL_HOST -uroot -pRoboShop@1 < /app/db/master-data.sql &>>$LOGS_FILE
     VALIDATE $? "Loaded data into MySQL"
