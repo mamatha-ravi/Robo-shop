@@ -11,10 +11,10 @@ START_TIME=$(date +%s)
 
 
 Root_CHECK(){
-    if [ $USER_ID -ne 0 ]; then\
+    if [ $USER_ID -ne 0 ]; then
     echo -e "$R Please run script with Root User $N"
     exit 1
-}
+   }
 VALIDATE(){
     if [ $? -eq 0 ]; then
     echo -e "$(date "+%Y %m %d %H:%M:%S") | $2...$G Success $N"
