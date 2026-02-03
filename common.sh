@@ -21,6 +21,7 @@ VALIDATE(){
     echo -e "$(date "+%Y %m %d %H:%M:%S") | $2...$G Success $N"
     else
     echo -e "$(date "+%Y %m %d %H:%M:%S") | $2...$R Failure $N"
+    fi
 }
 TOTAL_EXE_TIME(){
     END_TIME=$(date %s)
