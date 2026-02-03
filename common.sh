@@ -14,6 +14,7 @@ Root_CHECK(){
     if [ $USER_ID -ne 0 ]; then
     echo -e "$R Please run script with Root User $N"
     exit 1
+    fi
    }
 VALIDATE(){
     if [ $? -eq 0 ]; then
