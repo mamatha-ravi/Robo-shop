@@ -16,7 +16,7 @@ Root_CHECK(){
     exit 1
     fi
    }
-VALIDATE(){
+validate(){
     if [ $? -eq 0 ]; then
     echo -e "$(date "+%Y %m %d %H:%M:%S") | $2...$G Success $N"
     else
