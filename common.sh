@@ -18,9 +18,9 @@ Root_CHECK(){
    }
 validate(){
     if [ $? -eq 0 ]; then
-    echo -e "$(date "+%Y %m %d %H:%M:%S") | $2...$G Success $N"
+    echo -e "$(date "+%Y %m %d %H:%M:%S") | $1...$G Success $N" | tee -a $log_file
     else
-    echo -e "$(date "+%Y %m %d %H:%M:%S") | $2...$R Failure $N"
+    echo -e "$(date "+%Y %m %d %H:%M:%S") | $1...$R Failure $N" | tee -a $log_file
     fi
 }
 TOTAL_EXE_TIME(){
