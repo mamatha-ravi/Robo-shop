@@ -9,7 +9,7 @@ log_folder="var/log/Robo-shop"
 log_file="$log_folder/$0.log"
 START_TIME=$(date +%s)
 
-
+mkdir -p $log_folder
 Root_CHECK(){
     if [ $USER_ID -ne 0 ]; then
     echo -e "$R Please run script with Root User $N"
