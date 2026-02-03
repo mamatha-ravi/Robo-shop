@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT="mongodb"
+
 source ./common.sh
 Root_CHECK
 cp mongo.repo /etc/yum.repos.d/mongo.repo
@@ -18,3 +18,5 @@ validate "allowing remote connections"
 
 systemctl restart mongod
 validate "restarted mongodb"
+
+TOTAL_EXE_TIME
